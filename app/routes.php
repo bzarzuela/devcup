@@ -35,3 +35,8 @@ Route::get('contact', function()
 {
     return View::make('contact');
 });
+
+Route::get('email_template', function()
+{
+    return View::make('email_template');
+});
