@@ -37,27 +37,9 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-8 col-md-offset-2">
-                        <div class="input-group">
-                          <span class="input-group-addon">Brand</span>
-                          <input type="text" class="form-control" placeholder="Enter one only. For example: 'Coca-Cola'">
-                        </div>
-                        <br>
-                        <div class="input-group">
-                          <span class="input-group-addon">How many users do you want us to give you?</span>
-                          <select name="location" class="btn btn-special dropdown-toggle">
-                              <option class="poop" value="10">10</option>
-                              <option class="poop" value="50">50</option>
-                              <option class="poop" value="100">100</option>
-                          </select>
-                        </div>                   
-                        <br>     
-                        <div class="input-group">
-                          <span class="input-group-addon">Where do we send the results?</span>
-                          <input type="text" class="form-control" placeholder="Your email address">
-                        </div>
-                        <br>
-                        <br>
-                      <input type="submit" value="Submit" class="btn btn-default">
+                        <h1>Thank you!</h1>
+                        <p class="intro-text">NOUS is now scanning the Twitterverse for your brand's biggest movers.</p>
+                        <p>We will email you with the results as soon as your results are ready.</p>
                     </div>
                 </div>
             </div>
