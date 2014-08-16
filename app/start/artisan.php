@@ -12,3 +12,4 @@
 */
 
 Artisan::add(new DevSherlock);
+Artisan::add(new DevRun);

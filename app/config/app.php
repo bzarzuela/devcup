@@ -11,6 +11,7 @@ return array(
 	],
 
 	'redis_prefix' => 'nous',
+	'sentiment_api' => 'http://www.sentiment140.com/api/bulkClassifyJson?appid=bzarzuela@gmail.com',
 
 	/*
 	|--------------------------------------------------------------------------

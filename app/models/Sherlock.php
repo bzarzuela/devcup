@@ -10,10 +10,12 @@ class Sherlock
     $redis = Redis::connection();
     $prefix = Config::get('app.redis_prefix');
 
+    $lang = 'en';
+
     $params = array(
         'q' => $keyword,
-        'lang' => 'en',
-        'count' => 100,
+        'lang' => $lang,
+        'count' => 10,
     );
 
     $response = $tw->get('search/tweets', $params);
@@ -26,6 +28,7 @@ class Sherlock
       $tweets[] = [
         'id' => $status['id_str'],
         'text' => $status['text'],
+        'lang' => $lang,
       ];
     }
 
