@@ -42,6 +42,7 @@ h2 {
 <h1>You asked NOUS to find the '50' most recent brand movers for 'Sprite'.</h1>
 <h2>Here is one:</h2>
 <div>
+<br>TWEET IS HERE! HOHOHO! TWEET IS HERE!
 <img src="images/twitterpic.jpg" height="150px">
 <p class="deets">@username
 <br>No of Followers

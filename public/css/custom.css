@@ -250,3 +250,6 @@ img::-moz-selection {
     color: #000000;
 }
 
+.mover {
+    outline: 10px;
+}

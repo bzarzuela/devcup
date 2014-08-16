@@ -39,6 +39,7 @@
                     <div class="col-md-6 col-md-offset-3">
                         <h1 class="brand-heading">NOUS</h1>
                         <p class="intro-text">connecting brands with their movers</p>
+                    
                     </div>
                 </div>
             </div>
