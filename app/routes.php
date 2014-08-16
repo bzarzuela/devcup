@@ -15,3 +15,23 @@ Route::get('/', function()
 {
 	return View::make('index');
 });
+
+Route::get('about', function()
+{
+    return View::make('about');
+});
+
+Route::get('connect', function()
+{
+    return View::make('connect');
+});
+
+Route::get('pricing', function()
+{
+    return View::make('pricing');
+});
+
+Route::get('contact', function()
+{
+    return View::make('contact');
+});

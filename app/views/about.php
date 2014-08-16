@@ -36,10 +36,9 @@
         <div class="intro-body">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-6 col-md-offset-3">
-                        <h1 class="brand-heading">NOUS</h1>
-                        <p class="intro-text">connecting brands with their movers</p>
-                        <p>ENTER</p>
+                    <div class="col-md-8 col-md-offset-2">
+                        <h1>What is NOUS?</h1>
+                        <p class="intro-text">NOUS is a service that allows </p>
                     </div>
                 </div>
             </div>

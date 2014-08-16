@@ -36,10 +36,24 @@
         <div class="intro-body">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-6 col-md-offset-3">
-                        <h1 class="brand-heading">NOUS</h1>
-                        <p class="intro-text">connecting brands with their movers</p>
-                        <p>ENTER</p>
+                    <div class="col-md-8 col-md-offset-2">
+                        <div class="input-group">
+                          <span class="input-group-addon">Keyword</span>
+                          <input type="text" class="form-control" placeholder="For example: 'Coca-Cola' 'Sprite' 'Modess'">
+                        </div>
+                        <br>
+                        <div class="input-group">
+                          <span class="input-group-addon">How many results do you want?</span>
+                          <input type="text" class="form-control" placeholder="For example: 'Coca-Cola' 'Sprite' 'Modess'">
+                        </div>                   
+                        <br>     
+                        <div class="input-group">
+                          <span class="input-group-addon">Where do we send the results?</span>
+                          <input type="text" class="form-control" placeholder="Your email address">
+                        </div>
+                        <br>
+                        <br>
+                      <button type="button" class="btn btn-default">Submit</button>
                     </div>
                 </div>
             </div>
