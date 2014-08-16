@@ -3,7 +3,7 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "a8c9bc04a5706bf54f2a6d2e62168e90",
+    "hash": "0a9ab65780922d00ca159fe616043ec4",
     "packages": [
         {
             "name": "classpreloader/classpreloader",
@@ -745,6 +745,51 @@
                 "psr-3"
             ],
             "time": "2012-12-21 11:40:51"
+        },
+        {
+            "name": "ricardoper/twitteroauth",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ricardoper/TwitterOAuth.git",
+                "reference": "282d7a1aaec6e25f1ef5952aaf766bc02b8c592f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ricardoper/TwitterOAuth/zipball/282d7a1aaec6e25f1ef5952aaf766bc02b8c592f",
+                "reference": "282d7a1aaec6e25f1ef5952aaf766bc02b8c592f",
+                "shasum": ""
+            },
+            "require": {
+                "ext-curl": "*",
+                "php": ">=5.3"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "TwitterOAuth\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Ricardo Pereira",
+                    "email": "github@ricardopereira.es",
+                    "homepage": "http://ricardopereira.es"
+                }
+            ],
+            "description": "PHP library to communicate with Twitter OAuth API version 1.1",
+            "homepage": "https://github.com/ricardoper",
+            "keywords": [
+                "API v1.1",
+                "oauth",
+                "php",
+                "twitter"
+            ],
+            "time": "2014-05-23 13:51:08"
         },
         {
             "name": "stack/builder",
@@ -1632,9 +1677,9 @@
 
     ],
     "minimum-stability": "stable",
-    "stability-flags": [
-
-    ],
+    "stability-flags": {
+        "ricardoper/twitteroauth": 20
+    },
     "platform": [
 
     ],
