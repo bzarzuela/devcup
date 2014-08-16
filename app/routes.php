@@ -26,6 +26,22 @@ Route::get('connect', function()
     return View::make('connect');
 });
 
+Route::post('connect', function()
+{
+  $email = Input::get('email');
+  $target = Input::get('target');
+  $keyword = Input::get('keyword');
+
+  $job = new Job;
+  $job->email = $email;
+  $job->target = $target;
+  $job->keyword = $keyword;
+  $job->next_run = date('Y-m-d H:i:s');
+  $job->save();
+
+    return View::make('thanks');
+});
+
 Route::get('pricing', function()
 {
     return View::make('pricing');

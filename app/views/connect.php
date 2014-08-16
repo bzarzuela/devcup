@@ -35,43 +35,34 @@
     <header class="intro">
         <div class="intro-body">
             <div class="container">
+              <form action="" method="post">
                 <div class="row">
                     <div class="col-md-8 col-md-offset-2">
                         <h1>Connect with your movers</h1>
                         <div class="input-group">
                           <span class="input-group-addon">Brand</span>
-                          <input type="text" class="form-control" placeholder="Enter one only. For example: 'Coca-Cola'">
+                          <input name="keyword" type="text" class="form-control" placeholder="Enter one only. For example: 'Coca-Cola'">
                         </div>
                         <br>
-<!--                         <div class="input-group">
-                          <span class="input-group-addon">How many movers do you want us to find for you?</span>
-                          <select name="location" class="dropdown-toggle">
-                              <option class="poop" value="10">10</option>
-                              <option class="poop" value="50">50</option>
-                              <option class="poop" value="100">100</option>
-                          </select>
-                        </div>                    -->
                         <div class="input-group">
                           <span class="input-group-addon">How many movers do you want us to find for you?</span>
-                          <div class="input-group-btn">
-                            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"> <span class="caret"></span></button>
-                            <ul class="dropdown-menu dropdown-menu-right" role="menu">
-                              <li><a value="10">10</a></li>
-                              <li><a value="50">50</a></li>
-                              <li><a value="100">100</a></li>
-                            </ul>
-                          </div>
+                          <select name="target" class="form-control">
+                            <option value="10">10</option>}
+                            <option value="50">50</option>}
+                            <option value="100">100</option>}
+                          </select>
                         </div>
-                        <br>     
+                        <br>
                         <div class="input-group">
                           <span class="input-group-addon">Where do we send the results?</span>
-                          <input type="text" class="form-control" placeholder="Your email address">
+                          <input name="email" type="email" class="form-control" placeholder="Your email address">
                         </div>
                         <br>
                         <br>
                       <input type="submit" value="Submit" class="btn btn-default">
                     </div>
                 </div>
+              </form>
             </div>
         </div>
     </header>
