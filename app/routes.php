@@ -35,3 +35,18 @@ Route::get('contact', function()
 {
     return View::make('contact');
 });
+
+Route::get('email_template', function()
+{
+    return View::make('email_template');
+});
+
+Route::get('results', function()
+{
+    return View::make('results');
+});
+
+Route::get('results_display', function()
+{
+    return View::make('results_display');
+});
