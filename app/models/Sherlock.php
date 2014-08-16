@@ -25,6 +25,10 @@ class Sherlock
     foreach ($response['statuses'] as $status) {
       $redis->set($prefix . ':status:' . $status['id_str'], json_encode($status));
 
+      $user = $status['user'];
+
+      $redis->set($prefix. ':user:' . $user['id_str'], json_encode($user));
+
       $tweets[] = [
         'id' => $status['id_str'],
         'text' => $status['text'],

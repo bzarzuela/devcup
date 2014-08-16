@@ -42,16 +42,19 @@ class DevRun extends Command {
 
     $this->info('Fetching Tweets');
 
-    $tweets = $sh->getTweets('coke');
+    $tweets = $sh->getTweets('Oreo');
 
-    $this->info('Got Tweets');
+    $this->info('Got ' . count($tweets) . ' Tweets');
 
     $classified = $psycho->classify($tweets);
 
     foreach ($classified as $rec) {
       if ($rec['sentiment'] == 'positive') {
         // We need to submit this account to our BotFilter
-        print_r($rec);
+        $this->info($rec['text']);
+        
+      } else {
+        $this->comment($rec['text']);
       }
     }
   }
