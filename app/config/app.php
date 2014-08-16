@@ -7,8 +7,10 @@ return array(
 		'consumer_secret' => '8Bxs90ORCAWALw2Ap8Fhx4XVek6NF1ZqnvKS1THYSIjt9gfSjm',
 		'oauth_token' => '14842370-LmGOUylI9aCigGdArqm4VnatZXi52firZ4LoBOrHl',
 		'oauth_token_secret' => 'PSXA4CA3wVSNyhmSac86G195bIUbSY3aQiTmteBoNWgH7',
-		'output_format' => 'object',
+		'output_format' => 'array',
 	],
+
+	'redis_prefix' => 'nous',
 
 	/*
 	|--------------------------------------------------------------------------
