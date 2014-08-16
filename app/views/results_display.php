@@ -26,39 +26,24 @@
 
 </head>
 
-<body id="page-top" data-target=".navbar-fixed-top">
+<body>
 
     <!-- Navigation -->
-<?php include('header.php'); ?>
-
     <!-- Content Area -->
     <header class="intro">
         <div class="intro-body">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-8 col-md-offset-2">
-                        <h1>Connect with your movers</h1>
-                        <div class="input-group">
-                          <span class="input-group-addon">Brand</span>
-                          <input type="text" class="form-control" placeholder="Enter one only. For example: 'Coca-Cola'">
-                        </div>
+                    <div class="col-md-12">
+                        <h1>Thank you for using NOUS. Here are your '50' most influential movers:</h1>
                         <br>
-                        <div class="input-group">
-                          <span class="input-group-addon">How many movers do you want us to find for you?</span>
-                          <select name="location" class="dropdown-toggle">
-                              <option class="poop" value="10">10</option>
-                              <option class="poop" value="50">50</option>
-                              <option class="poop" value="100">100</option>
-                          </select>
-                        </div>                   
-                        <br>     
-                        <div class="input-group">
-                          <span class="input-group-addon">Where do we send the results?</span>
-                          <input type="text" class="form-control" placeholder="Your email address">
-                        </div>
-                        <br>
-                        <br>
-                      <input type="submit" value="Submit" class="btn btn-default">
+                        <div id="mover">
+                            <img src="images/twitterpic.jpg" height="150px">
+                            <p><a href="twitter user page">@username</a>
+                            <br>No of Followers
+                            <br>No of Retweets
+                            </p>
+                        </div>                        
                     </div>
                 </div>
             </div>

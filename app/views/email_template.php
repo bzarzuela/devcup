@@ -44,10 +44,10 @@ h2 {
 <div>
 <img src="images/twitterpic.jpg" height="150px">
 <p class="deets">@username
-<br>Tweets
+<br>No of Followers
+<br>No of Retweets
 </p>
 </div>
-
 
 <h2>Please follow the link to view the other '49' results: (linkhere)</h2>
 

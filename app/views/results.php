@@ -37,28 +37,22 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-8 col-md-offset-2">
-                        <h1>Connect with your movers</h1>
+                        <h1>To view the remaining "49" matches, please enter your payment details:</h1>
                         <div class="input-group">
-                          <span class="input-group-addon">Brand</span>
-                          <input type="text" class="form-control" placeholder="Enter one only. For example: 'Coca-Cola'">
+                          <span class="input-group-addon">Name</span>
+                          <input type="text" class="form-control" placeholder="As it appears on your account.">
                         </div>
                         <br>
                         <div class="input-group">
-                          <span class="input-group-addon">How many movers do you want us to find for you?</span>
-                          <select name="location" class="dropdown-toggle">
-                              <option class="poop" value="10">10</option>
-                              <option class="poop" value="50">50</option>
-                              <option class="poop" value="100">100</option>
-                          </select>
-                        </div>                   
-                        <br>     
-                        <div class="input-group">
-                          <span class="input-group-addon">Where do we send the results?</span>
-                          <input type="text" class="form-control" placeholder="Your email address">
+                          <span class="input-group-addon">Card Number</span>
+                          <input type="text" class="form-control">
                         </div>
                         <br>
+                        <div class="input-group">
+                          <span class="input-group-addon">CVC Number</span>
+                          <input type="text" class="form-control">
+                        </div>
                         <br>
-                      <input type="submit" value="Submit" class="btn btn-default">
                     </div>
                 </div>
             </div>
