@@ -20,8 +20,8 @@ class CreateJobsTable extends Migration {
 			$table->integer('target');
 			$table->integer('progress');
 			$table->dateTime('next_run');
-			$table->dateTime('finished_at');
-			$table->dateTime('paid_at');
+			$table->dateTime('finished_at')->nullable();
+			$table->dateTime('paid_at')->nullable();
 			$table->timestamps();
 		});
 	}

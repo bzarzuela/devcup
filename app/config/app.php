@@ -13,6 +13,10 @@ return array(
 	'redis_prefix' => 'nous',
 	'sentiment_api' => 'http://www.sentiment140.com/api/bulkClassifyJson?appid=bzarzuela@gmail.com',
 
+	'judge' => [
+		'min_follower' => 10000,
+	],
+
 	/*
 	|--------------------------------------------------------------------------
 	| Application Debug Mode
@@ -50,7 +54,7 @@ return array(
 	|
 	*/
 
-	'timezone' => 'UTC',
+	'timezone' => 'Asia/Manila',
 
 	/*
 	|--------------------------------------------------------------------------

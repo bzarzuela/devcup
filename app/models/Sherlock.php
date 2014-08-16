@@ -15,7 +15,7 @@ class Sherlock
     $params = array(
         'q' => $keyword,
         'lang' => $lang,
-        'count' => 10,
+        'count' => 100,
     );
 
     $response = $tw->get('search/tweets', $params);
@@ -31,6 +31,7 @@ class Sherlock
 
       $tweets[] = [
         'id' => $status['id_str'],
+        'user_id' => $user['id_str'],
         'text' => $status['text'],
         'lang' => $lang,
       ];

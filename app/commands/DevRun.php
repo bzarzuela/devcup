@@ -39,10 +39,11 @@ class DevRun extends Command {
   {
     $sh = new Sherlock;
     $psycho = new Shrink;
+    $j = new Judge;
 
     $this->info('Fetching Tweets');
 
-    $tweets = $sh->getTweets('Oreo');
+    $tweets = $sh->getTweets('Sprite');
 
     $this->info('Got ' . count($tweets) . ' Tweets');
 
@@ -52,7 +53,12 @@ class DevRun extends Command {
       if ($rec['sentiment'] == 'positive') {
         // We need to submit this account to our BotFilter
         $this->info($rec['text']);
-        
+        if ($j->rule($rec['user_id'])) {
+          $this->info("Winner");
+          print_r($rec);
+        } else {
+          $this->error("Loser");
+        }
       } else {
         $this->comment($rec['text']);
       }

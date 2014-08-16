@@ -7,8 +7,19 @@ class Shrink
 {
   public function classify($tweets)
   {
+    $cleaned = [];
+
+    // Because the web service doesn't know how to handle UTF8
+    foreach ($tweets as $tweet) {
+      // $tweet['text'] = iconv("UTF-8","UTF-8//IGNORE",$tweet['text']);
+
+      $tweet['text'] = @iconv("UTF-8","ISO-8859-1//IGNORE",$tweet['text']);
+      $tweet['text'] = @iconv("ISO-8859-1","UTF-8",$tweet['text']);
+      $cleaned[] = $tweet;
+    }
+
     $payload = json_encode([
-      'data' => $tweets,
+      'data' => $cleaned,
     ]);
 
     $client = new Client;
@@ -26,7 +37,6 @@ class Shrink
       echo($response->getBody());
       die("Crap. We need to work around this");
     }
-    
 
     $redis = Redis::connection();
     $prefix = Config::get('app.redis_prefix');
@@ -54,6 +64,9 @@ class Shrink
           # TODO handle shit here.
         break;
       }
+
+      // Restore what we stripped earlier
+      $rec['text'] = $tweet['text'];
 
       $classified['data'][$key] = $rec;
 
