@@ -36,7 +36,7 @@
         <div class="intro-body">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-8 col-md-offset-2">
+                    <div class="col-md-6 col-md-offset-3">
                         <h1>Pricing</h1>
                         <p class="intro-text">We charge based on the number of leads you ask us to generate:</p>
                   <table class="table">
