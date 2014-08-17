@@ -14,7 +14,7 @@ return array(
 	'sentiment_api' => 'http://www.sentiment140.com/api/bulkClassifyJson?appid=bzarzuela@gmail.com',
 
 	'judge' => [
-		'min_follower' => 10000,
+		'min_follower' => 3000,
 	],
 
 	/*

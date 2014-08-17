@@ -37,20 +37,26 @@ class JobWorker extends Command {
 	 */
 	public function fire()
 	{
+		DB::disableQueryLog();
+
+		// My goto easter egg
+		begin:
+
 		try {
 			$pending = Job::whereRaw('finished_at IS NULL')
 				->where('next_run', '<=', date('Y-m-d H:i:s'))
 				->orderBy('next_run')
 				->firstOrFail();
 		} catch (Exception $e) {
-			print_r(DB::getQueryLog());
 			$this->info('Nothing to do');
-			exit;
+			sleep(1);
+			goto begin;
 		}
 
 		$sh = new Sherlock;
 		$psycho = new Shrink;
 		$j = new Judge;
+		$chatty = new Chatty('http://localhost:8081/chatty');
 
 		$this->info('Fetching Tweets for Job: ' . $pending->id);
 
@@ -60,7 +66,29 @@ class JobWorker extends Command {
 
 		$classified = $psycho->classify($tweets);
 
+		$orig_progress = $pending->progress;
+
 		foreach ($classified as $rec) {
+			$chatty->send([
+			  'room' => 'job-' . $pending->id,
+			  'sender' => 'tweet',
+			  'message' => $rec['text'],
+			  'timestamp' => date('Y-m-d H:i:s'),
+			]);
+
+			// 1500 - 2000ms delay for each message
+			usleep(rand(1500, 2000) * 1000);
+
+			$chatty->send([
+			  'room' => 'job-' . $pending->id,
+			  'sender' => 'sentiment',
+			  'message' => $rec['sentiment'],
+			  'timestamp' => date('Y-m-d H:i:s'),
+			]);
+
+			// 500-700ms delay for sentiment
+			usleep(rand(500, 700) * 1000);
+
 		  if ($rec['sentiment'] == 'positive') {
 		    // We need to submit this account to our BotFilter
 		    $this->info($rec['text']);
@@ -70,22 +98,67 @@ class JobWorker extends Command {
 		      $pending->addInfluencer($user, $rec);
 		      $pending->save();
 
+		      $chatty->send([
+		        'room' => 'job-' . $pending->id,
+		        'sender' => 'mover',
+		        'message' => 'Mover!',
+		        'timestamp' => date('Y-m-d H:i:s'),
+		      ]);
+
+		      $chatty->send([
+		        'room' => 'job-' . $pending->id,
+		        'sender' => 'progress',
+		        'message' => $pending->progress,
+		        'timestamp' => date('Y-m-d H:i:s'),
+		      ]);
+
 		    } else {
+
+		    	$chatty->send([
+		    	  'room' => 'job-' . $pending->id,
+		    	  'sender' => 'mover',
+		    	  'message' => $j->getReason(),
+		    	  'timestamp' => date('Y-m-d H:i:s'),
+		    	]);
+
 		      $this->error("Loser");
 		    }
 		  } else {
+		  	$chatty->send([
+		  	  'room' => 'job-' . $pending->id,
+		  	  'sender' => 'mover',
+		  	  'message' => 'Sentiment not positive.',
+		  	  'timestamp' => date('Y-m-d H:i:s'),
+		  	]);
 		    $this->comment($rec['text']);
 		  }
+
+		  usleep(rand(300, 500) * 1000);
+
+		  $chatty->send([
+		    'room' => 'job-' . $pending->id,
+		    'sender' => 'reset',
+		    'message' => '',
+		    'timestamp' => date('Y-m-d H:i:s'),
+		  ]);
 		}
 
 		if ($pending->progress >= $pending->target) {
 			$pending->finished_at = date('Y-m-d H:i:s');
+
+			$chatty->send([
+			  'room' => 'job-' . $pending->id,
+			  'sender' => 'pay',
+			  'message' => 1,
+			  'timestamp' => date('Y-m-d H:i:s'),
+			]);
 		} else {
-			$pending->next_run = date('Y-m-d H:i:s', time() + 60);
+			$pending->next_run = date('Y-m-d H:i:s', time() + 0);
 		}
 
 		$pending->save();
 
+		goto begin;
 
 	}
 
