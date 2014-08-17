@@ -48,8 +48,8 @@
                         <div id="sentiment">&nbsp;</div>
 
                         <div class="tweet-mover" id="mover">&nbsp;</div>
-
-                        <div style="display: <?php $done ? '' : 'none' ?>" id="pay">
+                        
+                        <div style="display: <?php echo ($done == true) ? '' : 'none' ?>" id="pay">
                             <p>You're done!</p>
                             <a href="<?php echo url('pay') ?>"><input type="submit" value="Pay" class="btn btn-default"></a>
                         </div>

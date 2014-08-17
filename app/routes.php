@@ -48,7 +48,7 @@ Route::post('connect', function()
 Route::get('live', function () {
   $job = Job::find(Session::get('job_id'));
 
-  if ($job->progress >= $job->target) {
+  if ($job->finished_at) {
     $done = true;
   } else {
     $done = false;
