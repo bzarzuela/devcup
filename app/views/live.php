@@ -69,22 +69,7 @@
                             
                         </div>
 
-                        <div id="results">
-                            <table class="table">
-                                <tr>
-                                    <td>Username</td>
-                                    <td>Tweet</td>
-                                </tr>
-                                <?php foreach ($influencers as $rec): ?>
-                                    <tr>
-                                        <td class="screen_name"><?php echo $rec->screen_name ?></td>
-                                        <td class="excerpt"><?php echo $rec->excerpt ?></td>
-                                    </tr>
-                                <?php endforeach ?>
-                            </table>
-                        </div>
-
-                        <button id="pay">Pay</button>
+                        <button id="pay" class="btn btn-primary">Pay</button>
                     </div>
                 </div>
             </div>
@@ -103,8 +88,13 @@
     <!-- Plugin JavaScript -->
     <script src="js/jquery.easing.min.js"></script>
 
-    <script src="/js/live.js"></script>
+    <script src="/js/sock.js"></script>
+    <script src="/js/chat.js"></script>
 
+    <script>
+    var channel = 'job-<?php echo $job->id ?>';
+    </script>
+    <script src="/js/live.js"></script>
 </body>
 
 </html>

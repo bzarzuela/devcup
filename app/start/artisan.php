@@ -14,3 +14,4 @@
 Artisan::add(new DevSherlock);
 Artisan::add(new DevRun);
 Artisan::add(new JobWorker);
+Artisan::add(new DevChat);
