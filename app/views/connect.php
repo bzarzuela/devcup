@@ -47,6 +47,7 @@
                         <div class="input-group">
                           <span class="input-group-addon">How many movers do you want us to find for you?</span>
                           <select name="target" class="form-control">
+                            <option value="5">5</option>}
                             <option value="10">10</option>}
                             <option value="50">50</option>}
                             <option value="100">100</option>}

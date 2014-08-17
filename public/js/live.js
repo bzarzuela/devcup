@@ -7,9 +7,7 @@ jQuery(function() {
       $('#tweet').text(data.message);
     }
     if (data.sender === 'sentiment') {
-      $('#sentiment').text(data.message);
-      $('#sentiment').removeClass();
-      $('#sentiment').addClass(data.message);
+      $('#sentiment').text(data.message).removeClass().addClass(data.message);
     }
     if (data.sender === 'mover') {
       $('#mover').text(data.message);
@@ -25,7 +23,7 @@ jQuery(function() {
     }
     if (data.sender === 'reset') {
       $('#mover').text('');
-      $('#sentiment').text('');
+      $('#sentiment').text('').removeClass();
       return $('#tweet').text('Please wait...');
     }
   });

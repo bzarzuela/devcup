@@ -35,7 +35,7 @@
     <header class="intro">
         <div class="intro-body">
             <div class="container">
-              <form action="" method="post">
+              <form action="<?php echo url('results_display?id=' . $job->id) ?>" method="get">
                 <div class="row">
                     <div class="col-md-8 col-md-offset-2">
                         <h1>Please enter your credit card details below:</h1>

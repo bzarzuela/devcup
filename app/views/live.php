@@ -49,7 +49,10 @@
 
                         <div id="mover"></div>
 
-                        <button style="display: none" id="pay" class="btn btn-primary">Pay</button>
+                        <div style="display: none" id="pay">
+                            <p>You're done!</p>
+                            <a href="<?php echo url('pay') ?>">Pay here</a>
+                        </div>
                     </div>
                 </div>
             </div>
