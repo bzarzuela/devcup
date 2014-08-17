@@ -58,16 +58,12 @@
                         </div>
 
                         <div id="tweet">
-                            
+                            Please wait...
                         </div>
 
-                        <div id="sentiment">
-                            
-                        </div>
+                        <div id="sentiment"></div>
 
-                        <div id="mover">
-                            
-                        </div>
+                        <div id="mover"></div>
 
                         <button style="display: none" id="pay" class="btn btn-primary">Pay</button>
                     </div>

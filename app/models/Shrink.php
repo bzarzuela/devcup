@@ -13,8 +13,8 @@ class Shrink
     foreach ($tweets as $tweet) {
       // $tweet['text'] = iconv("UTF-8","UTF-8//IGNORE",$tweet['text']);
 
-      $tweet['text'] = @iconv("UTF-8","ISO-8859-1//IGNORE",$tweet['text']);
-      $tweet['text'] = @iconv("ISO-8859-1","UTF-8",$tweet['text']);
+      $tweet['text'] = @iconv("UTF-8","CP437",$tweet['text']);
+      $tweet['text'] = @iconv("CP437","UTF-8",$tweet['text']);
       $cleaned[] = $tweet;
     }
 

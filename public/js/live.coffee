@@ -7,6 +7,8 @@ jQuery ->
 
     if data.sender == 'sentiment'
       $('#sentiment').text(data.message)
+      $('#sentiment').removeClass();
+      $('#sentiment').addClass(data.message)
 
     if data.sender == 'mover'
       $('#mover').text(data.message)
@@ -22,4 +24,4 @@ jQuery ->
     if data.sender == 'reset'
       $('#mover').text('')
       $('#sentiment').text('')
-      $('#tweet').text('')
+      $('#tweet').text('Please wait...');
