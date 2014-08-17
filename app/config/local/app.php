@@ -16,7 +16,7 @@ return array(
 	'debug' => true,
 
 	'judge' => [
-		'min_follower' => 100,
+		'min_follower' => 1500,
 	],
 
 );
