@@ -4,7 +4,7 @@ use TwitterOAuth\TwitterOAuth;
 
 class Sherlock
 {
-  public function getTweets($keyword)
+  public function getTweets($keyword, $since_id = '')
   {
     $tw = new TwitterOAuth(Config::get('app.twitter'));
     $redis = Redis::connection();
@@ -16,6 +16,7 @@ class Sherlock
         'q' => $keyword,
         'lang' => $lang,
         'count' => 10,
+        'since_id' => $since_id,
     );
 
     $response = $tw->get('search/tweets', $params);

@@ -60,7 +60,7 @@ class JobWorker extends Command {
 
 		$this->info('Fetching Tweets for Job: ' . $pending->id);
 
-		$tweets = $sh->getTweets($pending->keyword);
+		$tweets = $sh->getTweets($pending->keyword, $pending->since_id);
 
 		$this->info('Got ' . count($tweets) . ' Tweets');
 
@@ -141,7 +141,9 @@ class JobWorker extends Command {
 		    'message' => '',
 		    'timestamp' => date('Y-m-d H:i:s'),
 		  ]);
-		}
+
+		  $pending->since_id = $rec['id'];
+		} // End loop of $classified
 
 		if ($pending->progress >= $pending->target) {
 			$pending->finished_at = date('Y-m-d H:i:s');

@@ -54,7 +54,7 @@
                 <div class="row">
                     <div class="col-md-8 col-md-offset-2">
                         <div>
-                            <span id="progress"><?php echo $job->progress ?></span> out of <?php echo $job->target ?> complete.
+                            <span id="progress"><?php echo $job->progress ?></span> out of <span id="target"><?php echo $job->target ?></span> complete.
                         </div>
 
                         <div id="tweet">

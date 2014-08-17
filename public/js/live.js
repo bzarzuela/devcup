@@ -17,6 +17,9 @@ jQuery(function() {
     }
     if (data.sender === 'progress') {
       $('#progress').text(data.message);
+      if (parseInt($('#progress').text()) >= parseInt($('#target').text())) {
+        $('#pay').show();
+      }
     }
     if (data.sender === 'reset') {
       $('#mover').text('');
