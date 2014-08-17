@@ -28,7 +28,7 @@ Route::get('connect', function()
 
 Route::post('connect', function()
 {
-  $email = Input::get('email');
+  $email = Input::get('email', '');
   $target = Input::get('target');
   $keyword = Input::get('keyword');
 
@@ -71,7 +71,7 @@ Route::get('email_template', function()
     return View::make('email_template');
 });
 
-Route::get('results', function()
+Route::get('pay', function()
 {
   $job = Job::find(Session::get('job_id'));
   return View::make('results', [

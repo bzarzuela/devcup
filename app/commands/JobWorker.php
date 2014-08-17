@@ -48,7 +48,7 @@ class JobWorker extends Command {
 				->orderBy('next_run')
 				->firstOrFail();
 		} catch (Exception $e) {
-			$this->info('Nothing to do');
+			// $this->info('Nothing to do');
 			sleep(1);
 			goto begin;
 		}
@@ -101,7 +101,7 @@ class JobWorker extends Command {
 		      $chatty->send([
 		        'room' => 'job-' . $pending->id,
 		        'sender' => 'mover',
-		        'message' => 'Mover!',
+		        'message' => 'We found a mover!',
 		        'timestamp' => date('Y-m-d H:i:s'),
 		      ]);
 
@@ -127,7 +127,7 @@ class JobWorker extends Command {
 		  	$chatty->send([
 		  	  'room' => 'job-' . $pending->id,
 		  	  'sender' => 'mover',
-		  	  'message' => 'Sentiment not positive.',
+		  	  'message' => 'Not a mover. Sentiment not positive.',
 		  	  'timestamp' => date('Y-m-d H:i:s'),
 		  	]);
 		    $this->comment($rec['text']);

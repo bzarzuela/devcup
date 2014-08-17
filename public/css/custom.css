@@ -273,39 +273,47 @@ img::-moz-selection {
 .positive {
     padding: 10px;
     margin-bottom: 30px;
+    text-transform: uppercase;
     font-size: 18px;
     font-weight: 200;
     line-height: 30px;
-    color: white;
-    background-color: #2DD00B;
-    -webkit-border-radius: 6px;
-    -moz-border-radius: 6px;
-      border-radius: 6px;
+    color: #2DD00B;
 }
 
 .neutral {
     padding: 10px;
     margin-bottom: 30px;
+    text-transform: uppercase;
     font-size: 18px;
     font-weight: 200;
     line-height: 30px;
-    color: #000000;
-    background-color: #FAF4E3;
-    -webkit-border-radius: 6px;
-    -moz-border-radius: 6px;
-      border-radius: 6px;
+    color: #FAF4E3;
 }
 
 .negative {
     padding: 10px;
     margin-bottom: 30px;
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: 200;
+    line-height: 30px;
+    color: #F02311;
+
+}
+
+.live-tweet {
+    padding: 10px;
+    margin-bottom: 40px;
     font-size: 18px;
     font-weight: 200;
     line-height: 30px;
     color: white;
-    background-color: #F02311;
+    background-color: #5DB5DE;
     -webkit-border-radius: 6px;
     -moz-border-radius: 6px;
       border-radius: 6px;
 }
 
+.tweet-mover {
+    text-decoration: bold;
+}

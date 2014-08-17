@@ -38,16 +38,16 @@
                 <div class="row">
                     <div class="col-md-8 col-md-offset-2">
                         <div>
-                            <span id="progress"><?php echo $job->progress ?></span> out of <span id="target"><?php echo $job->target ?></span> complete.
+                            <span id="progress"><?php echo $job->progress ?></span> out of <span id="target"><?php echo $job->target ?></span> complete.<br><br>
                         </div>
 
-                        <div id="tweet">
+                        <div class="live-tweet" id="tweet">
                             Please wait...
                         </div>
 
                         <div id="sentiment"></div>
 
-                        <div id="mover"></div>
+                        <div class="tweet-mover" id="mover"></div>
 
                         <div style="display: none" id="pay">
                             <p>You're done!</p>

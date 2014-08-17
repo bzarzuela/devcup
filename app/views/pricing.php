@@ -49,6 +49,11 @@
                     </thead>
                     <tbody align="left">
                             <tr>
+                                <td>5</td>
+                                <td>PHP 300.00</td>
+                                <td>PHP 60.00</td>
+                            </tr>
+                            <tr>
                                 <td>10</td>
                                 <td>PHP 500.00</td>
                                 <td>PHP 50.00</td>

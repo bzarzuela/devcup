@@ -37,10 +37,9 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-8 col-md-offset-2">
-                        <h1>What is NOUS?</h1>
                         <p class="intro-text">NOUS is a tool that enables brands to maximize their online presence by acquainting them with their most influential supporters on Twitter.</p>
-                        <p>Our sophisticated algorithm delivers the best leads for your online marketing campaign, automatically eliminating bots and spam accounts from the pool of leads.</p>
-                        <p>Allow NOUS to do the heavy lifting for you. Try NOUS today.</p>
+                        <p>Effectively, NOUS points you in the direction of Twitter users that you can tap to spread your message on the Twitterverse.</p>
+                        <p>Our sophisticated algorithm combined with the latest sentiment analysis technology delivers the best leads for your online marketing campaign, automatically eliminating bots and haters from your pool of leads.</p>
                     </div>
                 </div>
             </div>
