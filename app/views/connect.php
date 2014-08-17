@@ -54,11 +54,6 @@
                           </select>
                         </div>
                         <br>
-                        <div class="input-group">
-                          <span class="input-group-addon">Where do we send the results?</span>
-                          <input name="email" type="email" class="form-control" placeholder="Your email address">
-                        </div>
-                        <br>
                         <br>
                       <input type="submit" value="Submit" class="btn btn-default">
                     </div>

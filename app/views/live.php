@@ -51,7 +51,7 @@
 
                         <div style="display: none" id="pay">
                             <p>You're done!</p>
-                            <a href="<?php echo url('pay') ?>">Pay here</a>
+                            <a href="<?php echo url('pay') ?>"><input type="submit" value="Pay" class="btn btn-default"></a>
                         </div>
                     </div>
                 </div>
