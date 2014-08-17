@@ -32,20 +32,37 @@
             font-weight: 200;
             line-height: 30px;
             color: white;
-            background-color: green;
+            background-color: #2DD00B;
             -webkit-border-radius: 6px;
             -moz-border-radius: 6px;
               border-radius: 6px;
         }
 
         .neutral {
-            background-color: yellow;
-            color: black;
+            padding: 10px;
+            margin-bottom: 30px;
+            font-size: 18px;
+            font-weight: 200;
+            line-height: 30px;
+            color: #000000;
+            background-color: #FAF4E3;
+            -webkit-border-radius: 6px;
+            -moz-border-radius: 6px;
+              border-radius: 6px;
         }
 
         .negative {
-            background-color: red;
+            padding: 10px;
+            margin-bottom: 30px;
+            font-size: 18px;
+            font-weight: 200;
+            line-height: 30px;
             color: white;
+            background-color: #F02311;
+            -webkit-border-radius: 6px;
+            -moz-border-radius: 6px;
+              border-radius: 6px;
+
         }
     </style>
 </head>
