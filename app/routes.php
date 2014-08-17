@@ -35,6 +35,7 @@ Route::post('connect', function()
   $job = new Job;
   $job->email = $email;
   $job->target = $target;
+  $job->progress = 0;
   $job->keyword = $keyword;
   $job->next_run = date('Y-m-d H:i:s');
   $job->save();
