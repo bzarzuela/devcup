@@ -14,7 +14,8 @@ return array(
 	'sentiment_api' => 'http://www.sentiment140.com/api/bulkClassifyJson?appid=bzarzuela@gmail.com',
 
 	'judge' => [
-		'min_follower' => 3000,
+		// 'min_follower' => 3000,
+		'min_follower' => 500,
 	],
 
 	'sockjs' => 'http://nous.nicoledelrosario.com:8081/sockjs',
