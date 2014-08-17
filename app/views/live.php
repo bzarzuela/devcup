@@ -26,8 +26,16 @@
 
     <style type="text/css" media="screen">
         .positive {
-            background-color: green;
+            padding: 10px;
+            margin-bottom: 30px;
+            font-size: 18px;
+            font-weight: 200;
+            line-height: 30px;
             color: white;
+            background-color: green;
+            -webkit-border-radius: 6px;
+            -moz-border-radius: 6px;
+              border-radius: 6px;
         }
 
         .neutral {
