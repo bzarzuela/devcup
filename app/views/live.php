@@ -45,11 +45,11 @@
                             Please wait...
                         </div>
 
-                        <div id="sentiment"></div>
+                        <div id="sentiment">&nbsp;</div>
 
-                        <div class="tweet-mover" id="mover"></div>
+                        <div class="tweet-mover" id="mover">&nbsp;</div>
 
-                        <div style="display: none" id="pay">
+                        <div style="display: <?php $done ? '' : 'none' ?>" id="pay">
                             <p>You're done!</p>
                             <a href="<?php echo url('pay') ?>"><input type="submit" value="Pay" class="btn btn-default"></a>
                         </div>

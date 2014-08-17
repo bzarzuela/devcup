@@ -22,8 +22,8 @@ jQuery(function() {
       }
     }
     if (data.sender === 'reset') {
-      $('#mover').text('');
-      $('#sentiment').text('').removeClass();
+      $('#mover').html('&nbsp;');
+      $('#sentiment').html('&nbsp;').removeClass();
       return $('#tweet').text('Please wait...');
     }
   });

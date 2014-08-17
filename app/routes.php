@@ -48,11 +48,18 @@ Route::post('connect', function()
 Route::get('live', function () {
   $job = Job::find(Session::get('job_id'));
 
+  if ($job->progress >= $job->target) {
+    $done = true;
+  } else {
+    $done = false;
+  }
+
   $influencers = Influencer::where('job_id', '=', $job->id)->get();
 
   return View::make('live', [
     'job' => $job,
     'influencers' => $influencers,
+    'done' => $done,
   ]);
 });
 

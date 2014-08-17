@@ -41,7 +41,7 @@
                         <h1>Please enter your credit card details below:</h1>
                         <div class="input-group">
                           <span class="input-group-addon">Card Number</span>
-                          <input name="keyword" type="text" class="form-control" placeholder="Enter one only. For example: 'Coca-Cola'">
+                          <input name="keyword" type="text" class="form-control">
                         </div>
                         <br>
                         <div class="input-group">

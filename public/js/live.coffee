@@ -20,6 +20,6 @@ jQuery ->
         $('#pay').show()
 
     if data.sender == 'reset'
-      $('#mover').text('')
-      $('#sentiment').text('').removeClass()
+      $('#mover').html('&nbsp;')
+      $('#sentiment').html('&nbsp;').removeClass()
       $('#tweet').text('Please wait...')
