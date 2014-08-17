@@ -19,4 +19,9 @@ class Judge
 
     return $user;
   }
+
+  public function getReason()
+  {
+    return $this->reason;
+  }
 }
