@@ -26,7 +26,7 @@ $app = new Illuminate\Foundation\Application;
 
 $env = $app->detectEnvironment(array(
 
-	'local' => array('lucid32'),
+	'local' => array('lucid32','Airgore.local','airgore'),
 
 ));
 
