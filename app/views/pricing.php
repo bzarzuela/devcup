@@ -38,7 +38,34 @@
                 <div class="row">
                     <div class="col-md-8 col-md-offset-2">
                         <h1>Pricing</h1>
-                        <p class="intro-text">Pricing details go here</p>
+                        <p class="intro-text">We charge based on the number of leads you ask us to generate:</p>
+                  <table class="table">
+                    <thead align="left">
+                      <tr>
+                        <th># of Leads</th>
+                        <th>Price</th>
+                        <th>Cost per Lead</th>
+                      </tr>
+                    </thead>
+                    <tbody align="left">
+                            <tr>
+                                <td>10</td>
+                                <td>PHP 500.00</td>
+                                <td>PHP 50.00</td>
+                            </tr>
+                            <tr>
+                                <td>50</td>
+                                <td>PHP 2,250.00</td>
+                                <td>PHP 45.00</td>
+                            </tr>
+                            <tr>
+                                <td>100</td>
+                                <td>PHP 4,000.00</td>
+                                <td>PHP 40.00</td>
+                            </tr>                                                        
+                    </tbody>
+                  </table>
+
                     </div>
                 </div>
             </div>

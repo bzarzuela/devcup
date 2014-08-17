@@ -39,9 +39,8 @@
                     <div class="col-md-8 col-md-offset-2">
                         <h1>What is NOUS?</h1>
                         <p class="intro-text">NOUS is a tool that enables brands to maximize their online presence by acquainting them with their most influential supporters on Twitter.</p>
-                        <p>NOUS generates the best leads for your marketing campaign. </p>
-
-                        <p>Moop</p>
+                        <p>Our sophisticated algorithm delivers the best leads for your online marketing campaign, automatically eliminating bots and spam accounts from the pool of leads.</p>
+                        <p>Try NOUS today!</p>
                     </div>
                 </div>
             </div>
