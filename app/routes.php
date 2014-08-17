@@ -78,6 +78,7 @@ Route::get('results', function()
 
 Route::get('results_display', function()
 {
+
   $id = Input::get('id');
 
   $job = Job::find($id);

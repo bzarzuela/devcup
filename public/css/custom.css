@@ -253,3 +253,13 @@ img::-moz-selection {
 .mover {
     outline: 10px;
 }
+
+.twit-excerpt {
+    font-style: italic;
+    padding-top: 10px;
+    padding-right: 100px;
+}
+
+.away {
+    padding: 50px;
+}

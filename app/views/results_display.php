@@ -27,30 +27,27 @@
 </head>
 
 <body>
-
-    <!-- Navigation -->
-    <!-- Content Area -->
-    <header class="intro">
-        <div class="intro-body">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
-                        <h1>Thank you for using NOUS. Here are your '50' most influential movers:</h1>
-                        <br>
-                        <?php for ($i=0; $i < 50; $i++): ?>
-                        <div class="mover">
-                            <p>"TWEET IS HERE! HOHOHO! TWEET IS HERE!"</p>
-                            <img src="images/twitterpic.jpg" height="150px">
-                            <p><a href="twitter user page">@username</a>
-                            <br>No of Followers
-                            <br>No of Retweets
-                            </p>
-                        </div>
-                    <?php endfor; ?>
-                    </div>
+    <div class="container">
+        <div class="row">
+            <div class="away">
+                <h1>Thank you for using NOUS. Here are your <?php echo $job->target ?> most influential movers for <?php echo $job->keyword?>:</h1>
+                <br>
+                <?php foreach ($influencers as $influencer): ?>
+                    <div class="row col-md-6 mover">
+                    <img src="images/twitterpic.jpg" height="150px">
+                    <p class="twit-excerpt">"<?php echo $influencer->excerpt ?>"</p></a>
+                    <p><a href="https://twitter.com/<?php echo $influencer->screen_name ?>">@<?php echo $influencer->screen_name ?></a>
+                    <br>No of Followers
+                    <br>No of Retweets
+                    </p>
                 </div>
+            <?php endforeach; ?>
+
+
             </div>
         </div>
+    </div>
+    </div>
     </header>
 
     <!-- Footer -->
