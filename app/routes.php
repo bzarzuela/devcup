@@ -84,7 +84,6 @@ Route::get('results_display', function()
   $job = Job::find($id);
   $influencers = Influencer::where('job_id', '=', $job->id)->get();
 
-
   return View::make('results_display', [
     'job' => $job,
     'influencers' => $influencers,
