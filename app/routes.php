@@ -40,7 +40,20 @@ Route::post('connect', function()
   $job->next_run = date('Y-m-d H:i:s');
   $job->save();
 
-    return View::make('thanks');
+  return Redirect::to('live?id=' . $job->id);
+  return View::make('thanks');
+});
+
+Route::get('live', function () {
+  $id = Input::get('id');
+
+  $job = Job::find($id);
+  $influencers = Influencer::where('job_id', '=', $job->id)->get();
+
+  return View::make('live', [
+    'job' => $job,
+    'influencers' => $influencers,
+  ]);
 });
 
 Route::get('pricing', function()
@@ -65,5 +78,13 @@ Route::get('results', function()
 
 Route::get('results_display', function()
 {
-    return View::make('results_display');
+  $id = Input::get('id');
+
+  $job = Job::find($id);
+  $influencers = Influencer::where('job_id', '=', $job->id)->get();
+
+  return View::make('results_display', [
+    'job' => $job,
+    'influencers' => $influencers,
+  ]);
 });
