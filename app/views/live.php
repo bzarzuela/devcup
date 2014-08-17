@@ -37,6 +37,9 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-8 col-md-offset-2">
+
+                        <div id="everything">
+
                         <div>
                             <span id="progress"><?php echo $job->progress ?></span> out of <span id="target"><?php echo $job->target ?></span> complete.<br><br>
                         </div>
@@ -48,7 +51,9 @@
                         <div id="sentiment">&nbsp;</div>
 
                         <div class="tweet-mover" id="mover">&nbsp;</div>
-                        
+
+                        </div>
+
                         <div style="display: <?php echo ($done == true) ? '' : 'none' ?>" id="pay">
                             <p>You're done!</p>
                             <a href="<?php echo url('pay') ?>"><input type="submit" value="Pay" class="btn btn-default"></a>

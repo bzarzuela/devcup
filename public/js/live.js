@@ -14,11 +14,13 @@ jQuery(function() {
     }
     if (data.sender === 'pay') {
       $('#pay').show();
+      $('#everything').hide();
     }
     if (data.sender === 'progress') {
       $('#progress').text(data.message);
       if (parseInt($('#progress').text()) >= parseInt($('#target').text())) {
         $('#pay').show();
+        $('#everything').hide();
       }
     }
     if (data.sender === 'reset') {
