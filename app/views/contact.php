@@ -37,7 +37,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-8 col-md-offset-2">
-                        <p class="intro-text">For more information, please contact our business development arm at business@nous.halfeatenfood.com</p>
+                        <p class="intro-text">For more information, please contact our business development team at business@nous.halfeatenfood.com</p>
                     </div>
                 </div>
             </div>

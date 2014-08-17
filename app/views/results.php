@@ -35,26 +35,64 @@
     <header class="intro">
         <div class="intro-body">
             <div class="container">
+              <form action="" method="post">
                 <div class="row">
                     <div class="col-md-8 col-md-offset-2">
-                        <h1>To view the remaining "49" matches, please enter your payment details:</h1>
-                        <div class="input-group">
-                          <span class="input-group-addon">Name</span>
-                          <input type="text" class="form-control" placeholder="As it appears on your account.">
-                        </div>
-                        <br>
+                        <h1>Please enter your credit card details below:</h1>
                         <div class="input-group">
                           <span class="input-group-addon">Card Number</span>
-                          <input type="text" class="form-control">
+                          <input name="keyword" type="text" class="form-control" placeholder="Enter one only. For example: 'Coca-Cola'">
                         </div>
                         <br>
                         <div class="input-group">
-                          <span class="input-group-addon">CVC Number</span>
-                          <input type="text" class="form-control">
+                          <span class="input-group-addon">Expiry Date</span>
+                          <select name="target" class="form-control">
+                            <option value="">Month</option>}
+                            <option value="01">01</option>}
+                            <option value="02">02</option>}
+                            <option value="03">03</option>}
+                            <option value="04">04</option>}
+                            <option value="05">05</option>}                                                        
+                            <option value="06">06</option>}
+                            <option value="07">07</option>}
+                            <option value="08">08</option>}
+                            <option value="09">09</option>}
+                            <option value="10">10</option>}
+                            <option value="11">11</option>}
+                            <option value="12">12</option>}                            
+                          </select>
+                        <select name="target" class="form-control">
+                            <option value="">Year</option>}                                                        
+                            <option value="06">2014</option>}
+                            <option value="07">2015</option>}
+                            <option value="07">2015</option>}
+                            <option value="07">2016</option>}
+                            <option value="07">2017</option>}
+                            <option value="07">2018</option>}
+                            <option value="07">2019</option>}
+                            <option value="08">2020</option>}
+                            <option value="09">2021</option>}
+                            <option value="10">2022</option>}
+                            <option value="11">2023</option>}
+                            <option value="2024">2024</option>}      
+                          </select>
                         </div>
                         <br>
+                        <div class="input-group">
+                          <span class="input-group-addon">Name as shown on card</span>
+                          <input name="email" type="email" class="form-control">
+                        </div>
+                        <br>
+                        <div class="input-group">
+                          <span class="input-group-addon">Card Verification Number</span>
+                          <input name="email" type="email" class="form-control">
+                        </div>                        
+                        <br>
+                        <br>
+                      <input type="submit" value="Pay" class="btn btn-default">
                     </div>
                 </div>
+              </form>
             </div>
         </div>
     </header>
