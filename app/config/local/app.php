@@ -19,4 +19,6 @@ return array(
 		'min_follower' => 1500,
 	],
 
+	'sockjs' => 'http://localhost:8081/sockjs',
+
 );

@@ -1,5 +1,5 @@
 jQuery ->
-  bot = new ChatBot('http://localhost:8081/sockjs', channel)
+  bot = new ChatBot(sockjs_url, channel)
 
   bot.onMessage (data) ->
     if data.sender == 'tweet'

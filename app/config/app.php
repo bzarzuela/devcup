@@ -17,6 +17,8 @@ return array(
 		'min_follower' => 3000,
 	],
 
+	'sockjs' => 'http://localhost:8081/sockjs',
+
 	/*
 	|--------------------------------------------------------------------------
 	| Application Debug Mode

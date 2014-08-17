@@ -81,6 +81,7 @@
 
     <script>
     var channel = 'job-<?php echo $job->id ?>';
+    var sockjs_url = '<?php echo Config::get("app.sockjs") ?>';
     </script>
     <script src="/js/live.js"></script>
 </body>
