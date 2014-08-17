@@ -30,19 +30,17 @@
 
     <!-- Navigation -->
     <!-- Content Area -->
-    <header class="intro">
-        <div class="intro-body">
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
                         <h1>Thank you for using NOUS. Here are your '50' most influential movers:</h1>
                         <br>
 
-                        <?php foreach ($influencers as $influencer => $excerpt): ?>
+                        <?php foreach ($influencers as $influencer): ?>
                         <div class="mover">
-                            <p><?php echo $excerpt ?></p>
+                            <p>"<?php echo $influencer->excerpt ?>"</p></a>
                             <img src="images/twitterpic.jpg" height="150px">
-                            <p><a href="twitter user page">@username</a>
+                            <p><a href="https://twitter.com/<?php echo $influencer->screen_name ?>">@<?php echo $influencer->screen_name ?></a>
                             <br>No of Followers
                             <br>No of Retweets
                             </p>
