@@ -84,6 +84,15 @@ Route::get('results_display', function()
   $job = Job::find($id);
   $influencers = Influencer::where('job_id', '=', $job->id)->get();
 
+  $prefix = Config::get('app.redis_prefix');
+  $redis = Redis::connection();
+
+  foreach ($influencers as $rec) {
+    $user = json_decode($redis->get($prefix . ':user:' . $rec['user_id']), true);
+    $rec->photo = $user['profile_image_url'];
+    $rec->followers_count = $user['followers_count'];
+  }
+
   return View::make('results_display', [
     'job' => $job,
     'influencers' => $influencers,

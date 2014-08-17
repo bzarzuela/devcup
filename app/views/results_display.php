@@ -34,11 +34,10 @@
                 <br>
                 <?php foreach ($influencers as $influencer): ?>
                     <div class="row col-md-6 mover">
-                    <img src="images/.jpg" height="150px">
+                    <img src="<?php echo $influencer->photo ?>">
                     <p class="twit-excerpt">"<?php echo $influencer->excerpt ?>"</p></a>
                     <p><a href="https://twitter.com/<?php echo $influencer->screen_name ?>">@<?php echo $influencer->screen_name ?></a>
-                    <br>No of Followers
-                    <br>No of Retweets
+                    <br><?php echo $influencer->followers_count ?> Followers
                     </p>
                 </div>
             <?php endforeach; ?>
