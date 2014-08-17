@@ -78,10 +78,12 @@ Route::get('results', function()
 
 Route::get('results_display', function()
 {
+
   $id = Input::get('id');
 
   $job = Job::find($id);
   $influencers = Influencer::where('job_id', '=', $job->id)->get();
+
 
   return View::make('results_display', [
     'job' => $job,
