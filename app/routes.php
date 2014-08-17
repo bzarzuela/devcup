@@ -40,14 +40,14 @@ Route::post('connect', function()
   $job->next_run = date('Y-m-d H:i:s');
   $job->save();
 
-  return Redirect::to('live?id=' . $job->id);
-  return View::make('thanks');
+  Session::set('job_id', $job->id);
+
+  return Redirect::to('live');
 });
 
 Route::get('live', function () {
-  $id = Input::get('id');
+  $job = Job::find(Session::get('job_id'));
 
-  $job = Job::find($id);
   $influencers = Influencer::where('job_id', '=', $job->id)->get();
 
   return View::make('live', [
@@ -73,15 +73,16 @@ Route::get('email_template', function()
 
 Route::get('results', function()
 {
-    return View::make('results');
+  $job = Job::find(Session::get('job_id'));
+  return View::make('results', [
+    'job' => $job,
+  ]);
 });
 
 Route::get('results_display', function()
 {
 
-  $id = Input::get('id');
-
-  $job = Job::find($id);
+  $job = Job::find(Session::get('job_id'));
   $influencers = Influencer::where('job_id', '=', $job->id)->get();
 
   $prefix = Config::get('app.redis_prefix');
