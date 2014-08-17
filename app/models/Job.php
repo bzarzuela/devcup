@@ -18,6 +18,7 @@ class Job extends Eloquent
     $inf->user_id = $tweet['user_id'];
     $inf->tweet_id = $tweet['id'];
     $inf->screen_name = $user['screen_name'];
+    $inf->profile_image_url = $user['profile_image_url'];
     $inf->excerpt = $tweet['text'];
     $inf->save();
 
